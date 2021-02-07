@@ -1,0 +1,46 @@
+.wheaterApp {
+margin-top: 20px;
+}
+
+.wheaterAppBox {
+    padding: 25px;
+    text-align: center;
+    min-width: 35vw;
+    min-height: 60vh;
+    border-radius: 25px;
+    background: linear-gradient(#4b8dff, #3c76da);
+    box-shadow: 0px 0px 0px 0.8px rgba(0,0,0,0.4);
+}
+.wheaterAppBox > h2 {
+    font-size: 1.7rem;
+    display: block;
+    margin-top: 15px;
+}
+.wheaterAppBox > h3 {
+    color: white;
+    font-size: 1.4rem;
+    display: block;
+    font-weight: lighter;
+}
+
+.wheaterAppBox > p {
+    color: white;
+}
+
+.wheaterAppBox > button {
+    padding: 13px;
+    border-radius: 25px;
+    background-color: #4b8dff;
+    outline: none;
+    box-shadow: none;
+    border-style: none;
+    color: white;
+    transition: all .2s ease-in-out; 
+}
+
+.wheaterAppBox > button:hover {
+    color: black;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transform: scale(1.1);
+}
