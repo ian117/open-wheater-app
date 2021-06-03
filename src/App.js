@@ -27,6 +27,10 @@ function App() {
     }
   }
 
+  function toFixed2 (number) {
+    return Number.parseFloat(number).toFixed(2)
+  }
+
   //Kelvin to CEN
   const convertKeltoCen = (kel) => {
     const cel = kel - 273.15
@@ -37,11 +41,11 @@ function App() {
   //Celsius To Farenheit
   const convertCF = () => {
     if(isInCen){
-      const Far = (temperatureCEN*1.8)+32
+      const Far = toFixed2((temperatureCEN*1.8)+32)
       setTemperatureCEN(Far)
       setIsInCen(false)
     } else {
-      const Cel = (temperatureCEN-32)/1.8
+      const Cel = toFixed2((temperatureCEN-32)/1.8)
       setTemperatureCEN(Cel)
       setIsInCen(true)
     }
@@ -58,7 +62,7 @@ function App() {
     setCountry(data.sys["country"])
     setWheater(data.weather[0].icon)
     setWheaterTEXT(data.weather[0].description)
-    setTemperatureCEN(convertKeltoCen(data.main.temp))
+    setTemperatureCEN(toFixed2(convertKeltoCen(data.main.temp)))
   }
     
 
@@ -97,7 +101,7 @@ function App() {
 
 
   return (<div className="App">
-    <button onClick={callApi} className="display-btn">I want to know my weather</button>
+    {knownData == false ? <button onClick={callApi} className="display-btn">I want to know my weather</button> : null}
     <IfTernaryComponent condition={knownData}/>
     </div>);
 }

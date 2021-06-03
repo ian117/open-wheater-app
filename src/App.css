@@ -2,9 +2,12 @@
 
 body {
 
-    background-color: #4b8dff;
+    background-color: #311d3f;
 }
 
+.notDisplay {
+    display: hidden;
+}
 
 .App {
     font-family: 'Inconsolata', monospace;
@@ -23,7 +26,7 @@ body {
     max-width: 40%;
     min-height: 12vh;
     border-radius: 10px;
-    background-color: #6abfc3;
+    background-color: #0f4c75;
     transition: all .2s ease-in-out; 
     border-style: none;
 }
